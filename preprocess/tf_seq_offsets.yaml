@@ -1,0 +1,10 @@
+mean_offsets:
+  hela_ctcf: 0
+  gm12878_ctcf: 0.02
+  gm12878_rad21: 0.12
+  gm12878_polr2a: 0.14
+std_offsets:
+  hela_ctcf: 0.03
+  gm12878_ctcf: -0.02
+  gm12878_rad21: -0.01
+  gm12878_polr2a: -0.0
