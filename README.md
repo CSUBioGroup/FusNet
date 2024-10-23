@@ -29,8 +29,6 @@ Dependencies:
 conda create -n fusnet python=3.9.16
 # activate
 conda activate fusnet
-# deactivate
-conda fusnet
 ```
 
 **2. Install FusNet**
