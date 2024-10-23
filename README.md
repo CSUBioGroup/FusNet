@@ -1,32 +1,26 @@
-# FusNet
-## A deep learning method based on model fusion strategy for predicting protein-mediated loops.
-## Contents
-- Installation
-- Model training
-- Model predicting
+![logo](https://github.com/CSUBioGroup/FusNet/master/Figure/FusNet_logo.png)
+## Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D Genome architecture
 
+## Contents
+- [Installation](#Installation)
+- [Long Sequence Generation (LSG)](#Long-Sequence-Generation (LSG))
+- [Anchor Predictor](#Anchor-Predictor)
+- [Loop Predictor](#Loop-Predictor)
+- [Example usage](#Example-usage)
 
 ## Installation
 FusNet is built on Python3. tombo is required to re-squiggle the raw signals from nanopore reads before running deepsignal.
 
 Prerequisites:
-
 - Python 3.x
-
 - tensorflow
 
 Dependencies:
-
 - h5py
-
 - numpy
-
 - pandas
-
 - xgboost
-
 - lightgbm
-
 - scikit-learn
 
 **1. Create an environment**
@@ -51,6 +45,20 @@ cd FusNet
 mkdir logs
 mkdir out_dir
 ```
+## Long Sequence Generation (LSG)
+FusNet incorporates a Long Sequence Generation (LSG) module to efficiently process shorter sequencing reads.
+
+**1. Pre-requries**
+
+- SPAdes Genome Assembler (https://github.com/ablab/spades)
+- Velvet Assembler (https://github.com/dzerbino/velvet)
+- MAC merging assembly tool (https://github.com/bioinfomaticsCSU/MAC)
+
+**2. Run the LSG script**
+
+Please modify the LSG script (see LSG.sh) to allow specification of the directories for the required tools, as well as the input and output directories. The workflow of LSG is shown in the figure below:
+
+![LSG](https://github.com/CSUBioGroup/FusNet/master/Figure/LSG.png)
 
 
 ## Model training
