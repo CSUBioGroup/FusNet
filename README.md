@@ -4,7 +4,7 @@ Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D
 
 ## Contents
 - [Installation](#Installation)
-- [Long Sequence Generation (LSG)](#Long-Sequence-Generation-(LSG))
+- [Long Sequence Generation (LSG)](#Long-Sequence-Generation)
 - [Anchor Predictor](#Anchor-Predictor)
 - [Loop Predictor](#Loop-Predictor)
 - [Example usage](#Example-usage)
@@ -46,7 +46,7 @@ cd FusNet
 mkdir logs
 mkdir out_dir
 ```
-## Long Sequence Generation (LSG)
+## Long Sequence Generation
 FusNet incorporates a Long Sequence Generation (LSG) module to efficiently process shorter sequencing reads.
 
 **1. Pre-requries**
