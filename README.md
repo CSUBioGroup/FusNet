@@ -11,22 +11,10 @@ Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D
 
 ## Installation
 
-Prerequisites:
-- Python 3.9.16
-- pytorch 1.12.1
-
-Dependencies:
-- h5py == 3.11.0
-- numpy == 1.26.2
-- pandas == 2.2.0
-- xgboost == 1.5.0
-- lightgbm == 4.3.0
-- scikit-learn == 1.3.0
-
 **1. Create an environment**
 ```
 # create a new enviroment
-conda create -n fusnet python=3.9.16
+conda env create -f environment.yml --name fusnet
 # activate
 conda activate fusnet
 ```
