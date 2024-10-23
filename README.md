@@ -1,4 +1,4 @@
-![logo](https://github.com/CSUBioGroup/FusNet/blob/main/Figure/FusNet_logo.png)
+<img src="https://github.com/CSUBioGroup/FusNet/blob/main/Figure/FusNet_logo.png" width="%50">
 ## Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D Genome architecture
 
 ## Contents
