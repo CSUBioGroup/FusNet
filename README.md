@@ -11,19 +11,19 @@ Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D
 
 ## Installation
 
-**1. Create an environment**
+**1. Install FusNet**
+```
+git clone https://github.com/bioinfomaticsCSU/FusNet.git
+# Using FusNet as the root directory for program execution
+cd FusNet
+```
+
+**2. Create an environment**
 ```
 # create a new enviroment
 conda env create -f environment.yml --name fusnet
 # activate
 conda activate fusnet
-```
-
-**2. Install FusNet**
-```
-git clone https://github.com/bioinfomaticsCSU/FusNet.git
-# Using FusNet as the root directory for program execution
-cd FusNet
 ```
 
 **3. Create directory**
