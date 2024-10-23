@@ -46,6 +46,39 @@ Please modify the LSG script (see LSG.sh) to allow specification of the director
 
 <img src="https://github.com/CSUBioGroup/FusNet/blob/main/Figure/LSG.png" width=700px>
 
+## Anchor-Predictor
+First, download the model files `pytorch_model.bin` and `config.json`, and ensure they are organized in the following structure:
+```
+model
+├── config.json
+└── pytorch_model.bin
+```
+You can generate the anchors by either running the following .sh script:
+```
+bash anchor_prediction.sh chr1 hg19 /path/to/hg19.fa /path/to/model 8 anchor/
+```
+Or, you can follow these steps to generate the anchors:
+#### Step 1: Generate the .bed file for the anchor of the desired chromosome.
+```
+python genome_bed.py chromosome=chr1 genome_version=hg19
+```
+The `sequence.bed` file will then be generated in the current folder.
+#### Step 2: Generate bedGraph files through the model.
+```
+python profiling.py \
+--bed_file sequence.bed \
+--fasta_file path/to/hg19.fa \
+--model_path path/to/model \
+--batch_size 8 \
+--output_prefix anchor/
+```
+#### Step 3: Generate anchor through MACS
+```
+macs3 bdgpeakcall -i anchor/GM12878_CTCF.bedGraph -o anchor/GM12878_CTCF.narrowPeak
+macs3 bdgpeakcall -i anchor/K562_YY1.bedGraph -o anchor/K562_YY1.narrowPeak
+macs3 bdgpeakcall -i anchor/K562_POLR2A.bedGraph -o anchor/K562_POLR2A.narrowPeak
+macs3 bdgpeakcall -i anchor/GM12878_RAD21.bedGraph -o anchor/GM12878_RAD21.narrowPeak
+```
 
 ## FusNet
 **1. Data preprocessing**
