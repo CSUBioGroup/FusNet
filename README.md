@@ -1,4 +1,4 @@
-![logo](https://github.com/CSUBioGroup/FusNet/master/Figure/FusNet_logo.png)
+![logo](https://github.com/CSUBioGroup/FusNet/main/Figure/FusNet_logo.png)
 ## Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D Genome architecture
 
 ## Contents
@@ -58,7 +58,7 @@ FusNet incorporates a Long Sequence Generation (LSG) module to efficiently proce
 
 Please modify the LSG script (see LSG.sh) to allow specification of the directories for the required tools, as well as the input and output directories. The workflow of LSG is shown in the figure below:
 
-![LSG](https://github.com/CSUBioGroup/FusNet/master/Figure/LSG.png)
+![LSG](https://github.com/CSUBioGroup/FusNet/main/Figure/LSG.png)
 
 
 ## Model training
