@@ -10,24 +10,23 @@ Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D
 - [Example usage](#Example-usage)
 
 ## Installation
-FusNet is built on Python3. tombo is required to re-squiggle the raw signals from nanopore reads before running deepsignal.
 
 Prerequisites:
-- Python 3.x
-- tensorflow
+- Python 3.9.16
+- pytorch 1.12.1
 
 Dependencies:
-- h5py
-- numpy
-- pandas
-- xgboost
-- lightgbm
-- scikit-learn
+- h5py == 3.11.0
+- numpy == 1.26.2
+- pandas == 2.2.0
+- xgboost == 1.5.0
+- lightgbm == 4.3.0
+- scikit-learn == 1.3.0
 
 **1. Create an environment**
 ```
 # create a new enviroment
-conda create -n fusnet python=3.9
+conda create -n fusnet python=3.9.16
 # activate
 conda activate fusnet
 # deactivate
@@ -62,7 +61,7 @@ Please modify the LSG script (see LSG.sh) to allow specification of the director
 <img src="https://github.com/CSUBioGroup/FusNet/blob/main/Figure/LSG.png" width=700px>
 
 
-## Model training
+## FusNet
 **1. Data preprocessing**
 ```
 bash preprocess/preprocess_data.sh \
@@ -137,29 +136,4 @@ python fusnet/predict.py -m out_dir/gm12878_rad21_extractor.model.pt \
 After the program runs successfully, the following files will be generated
 ```
 out_dir/gm12878_rad21_extracted_test_FusNet_probs.txt
-```
-
-## Model predicting
-**1. Data preprocessing**
-```
-python preprocess/generate_loops.py -m 1000 -e 500 \
---positive_loops out_dir/gm12878_rad21_negative_loops.bedpe \
--r data/hg19.fa -n gm12878_rad21_loops_negative -o out_dir -p True
-```
-
-**2. Extracting sequence features**
-```
-python fusnet/extract_feature.py \
-  out_dir/gm12878_ctcf_extractor.model.pt \
-  out_dir/gm12878_ctcf_loops_for_prediction_all_predict \
-  gm12878_ctcf_extracted_all_predict out_dir -p True
-```
-
-**3. Loops predicting**
-```
-python fusnet/extract_feature.py \
-  out_dir/gm12878_rad21_extractor.model.pt \
-  out_dir/gm12878_rad21_loops_all_predict.hdf5 \
-  gm12878_rad21_extracted_all_predict_ \
-  out_dir;
 ```
