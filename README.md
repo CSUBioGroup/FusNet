@@ -58,7 +58,7 @@ FusNet incorporates a Long Sequence Generation (LSG) module to efficiently proce
 
 Please modify the LSG script (see LSG.sh) to allow specification of the directories for the required tools, as well as the input and output directories. The workflow of LSG is shown in the figure below:
 
-![LSG](https://github.com/CSUBioGroup/FusNet/blob/main/Figure/LSG.png)
+<img src="https://github.com/CSUBioGroup/FusNet/blob/main/Figure/LSG.png" width=600px>
 
 
 ## Model training
