@@ -1,10 +1,10 @@
 <img src="https://github.com/CSUBioGroup/FusNet/blob/main/Figure/FusNet_logo.png" width=250px>
 
-## Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D Genome architecture
+Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D Genome architecture
 
 ## Contents
 - [Installation](#Installation)
-- [Long Sequence Generation (LSG)](#Long-Sequence-Generation (LSG))
+- [Long Sequence Generation (LSG)](#Long-Sequence-Generation-(LSG))
 - [Anchor Predictor](#Anchor-Predictor)
 - [Loop Predictor](#Loop-Predictor)
 - [Example usage](#Example-usage)
