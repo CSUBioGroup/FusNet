@@ -81,6 +81,10 @@ macs3 bdgpeakcall -i anchor/GM12878_RAD21.bedGraph -o anchor/GM12878_RAD21.narro
 ```
 
 ## FusNet
+
+**Sample data**
+We provided 4 sample data in the data folder, each containing DNase, ChIP seq, and ChIA PET data for generating positive and negative sample loops.
+
 **1. Data preprocessing**
 ```
 bash preprocess/preprocess_data.sh \
