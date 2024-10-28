@@ -7,7 +7,6 @@ Deciphering protein-mediated chromatin loops to explore disease mechanisms in 3D
 - [Long Sequence Generation (LSG)](#Long-Sequence-Generation)
 - [Anchor Predictor](#Anchor-Predictor)
 - [Loop Predictor](#Loop-Predictor)
-- [Example usage](#Example-usage)
 
 ## Installation
 
@@ -80,7 +79,7 @@ macs3 bdgpeakcall -i anchor/K562_POLR2A.bedGraph -o anchor/K562_POLR2A.narrowPea
 macs3 bdgpeakcall -i anchor/GM12878_RAD21.bedGraph -o anchor/GM12878_RAD21.narrowPeak
 ```
 
-## FusNet
+## Loop-Predictor
 
 **Sample data**
 
